@@ -34,7 +34,7 @@ function done()
 window.midExploit = function()
 {
     if(document.location.hash)
-    {
+    {     
         var s = decodeURIComponent(document.location.hash.substr(3));
         preloadScripts(['kex.js', s, 'PAYLOADS/c-code.js'], go);
     }
@@ -52,12 +52,12 @@ window.postExploit = function()
     }, 150);
 };
 </script>
-<script src="webkit.js"></script>
+<script src="webkit.js">setTimeout(executeMainFunction,1500);</script>
 <button id="input1" onfocus="handle2()"></button>
 <button id="input2"></button>
 <button id="input3" onfocus="handle2()"></button>
 <select id="select1">
 <option value="value1">Value1</option>
 </select>
-</body>
+setTimeout(executeMainFunction,1500);</body>
 </html>
